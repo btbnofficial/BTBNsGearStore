@@ -1,0 +1,140 @@
+﻿@model IEnumerable<BTBNsGearStore.Models.Product>
+
+@{
+    ViewBag.Title = "Danh Sách Sản Phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh Sách Sản Phẩm</h2>
+@using (Html.BeginForm("Index", "Product", FormMethod.Post))
+{
+    <fieldset>
+        <legend>
+            Nhập thông tin tìm kiếm:
+        </legend>
+        <table class="table table-striped">
+            <tr>
+                <td>Từ Khóa</td>
+                <td style="padding-left:30px; border-radius:7px">
+                    @Html.TextBox("tuKhoa", "", new { @class = "form-control" })
+                </td>
+                <td style="padding-left:30px">Danh Mục</td>
+                <td style="padding-left:30px">
+                    @*Hiển thị danh sách danh mục*@
+                    @Html.DropDownList("category", (SelectList)ViewBag.Category, "Danh mục", new { @class = "form-control" })
+                </td>
+                <td style="padding-left:30px">Thương Hiệu</td>
+                <td style="padding-left:30px">
+                    @*Hiển thị danh sách danh mục*@
+                    @Html.DropDownList("brand", (SelectList)ViewBag.Brand, "Thương hiệu", new { @class = "form-control" })
+                </td>
+                <td style="padding-left:30px">
+                    <input type="submit" name="btnTimKiem" value="Tìm kiếm" class="btn btn-primary" />
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <p style="text-align:center;">
+        <div class="btn btn-default">
+            @Html.ActionLink("Thêm Mới Sản Phẩm", "ThemMoi")
+        </div>
+    </p>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrandId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Guarantee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntryPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image4)
+            </th>
+            <th style="max-width:150px; max-height:150px;">
+                @Html.DisplayNameFor(model => model.Detail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BrandId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Guarantee)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EntryPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <img src="~/Content/Images/@item.Image1" width="80" height="90" style="border-radius:7px" />
+                </td>
+                <td>
+                    <img src="~/Content/Images/@item.Image2" width="80" height="90" style="border-radius:7px" />
+                </td>
+                <td>
+                    <img src="~/Content/Images/@item.Image3" width="80" height="90" style="border-radius:7px" />
+                </td>
+                <td>
+                    <img src="~/Content/Images/@item.Image4" width="80" height="90" style="border-radius:7px" />
+                </td>
+                <td style="max-width:150px; max-height:150px; overflow:hidden;">
+                    @Html.DisplayFor(modelItem => item.Detail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                
+                <td>
+                    @Html.ActionLink("Sửa", "Sua", new { id = item.Id }) |
+                    @Html.ActionLink("Chi Tiết", "ChiTiet", new { id = item.Id }) |
+                    @Html.ActionLink("Xóa", "Xoa", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+}

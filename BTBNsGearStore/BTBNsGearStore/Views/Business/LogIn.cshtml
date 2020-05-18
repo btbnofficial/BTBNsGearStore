@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "LogIn";
+    Layout = "~/Views/BTBNsGear/BTBNsGearStore.cshtml";
+}
+
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><a href="/Home/TrangChu"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+            <li class="active">Login Page</li>
+        </ol>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+@using (Html.BeginForm("Login", "Business", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <!-- login -->
+    <div class="login">
+        <div class="container">
+            <h2>ĐĂNG NHẬP TRANG QUẢN TRỊ</h2>
+            <div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
+                
+                    @Html.TextBox("username", "", new { @class = "form-control", placeholder = "Account", required = " ", @style = "border: 2px;height: 40px;border-radius: 7px;font-size: 14px; padding: 0px; margin-top: 0px; background-color:#e6fffb; float: left; margin-right:10px;" })
+                    @Html.TextBox("password", "", new { @class = "form-control", placeholder = "Password", required = " ", @style = "border: 2px;height: 40px;border-radius: 7px;font-size: 14px; padding: 0px; margin-top: 12px; background-color:#e6fffb; float: left; margin-right:10px; " })
+                    <input type="submit" value="Login" />
+                
+                <!--
+                    <form>
+                        <input type="text" placeholder="Account" required=" ">
+                        <input type="password" placeholder="Password" required=" ">
+
+                        <input type="submit" value="Login">
+                     </form>
+                -->
+            </div>
+        </div>
+    </div>
+    <!-- //login -->
+}

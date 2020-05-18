@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BTBNsGearStore.Models.Brand>
+
+@{
+    ViewBag.Title = "Danh sách Nhãn hiệu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh Sách Nhãn Hiệu</h2>
+
+<p class="btn btn-default" style="margin-bottom:15px">
+    @Html.ActionLink("Thêm Mới", "ThemMoiBrand")
+</p>
+<table class="table table-striped">
+    <tr>
+        
+        <th>
+            ID
+        </th>
+        <th>
+            Tên
+        </th>
+        <th>
+            Logo
+        </th>
+        <th>
+            Thông tin
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Id)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        <img src="~/Content/Images/@item.Image" width="80" height="90" style="border-radius:7px" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Info)
+    </td>
+    <td class="btn btn-default">
+        @Html.ActionLink("Xóa", "Xoa", new { id = item.Id }, new { onclick = "return confirm('Bạn có chắc muốn xóa không?');" })
+    </td>
+</tr>
+}
+
+</table>

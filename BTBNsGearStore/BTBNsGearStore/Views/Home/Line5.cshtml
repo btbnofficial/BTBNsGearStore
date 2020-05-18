@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BTBNsGearStore.Models.Product>
+
+@{
+    Layout = null;
+}
+
+@{
+    int i = 0;//Khai báo biến
+}
+@foreach (var item in Model)
+{
+    if (i < 4)
+    {
+        <!--Sản phẩm-->
+        <div class="col-md-3 top_brand_left-1" style="margin-top:20px;">
+            <div class="hover14 column">
+                <div class="agile_top_brand_left_grid">
+                    
+                    <div class="agile_top_brand_left_grid1">
+                        <figure>
+                            <div class="snipcart-item block">
+                                <div class="snipcart-thumb">
+                                    <a href="/Home/ChiTiet?Id=@item.Id"><img title=" " alt=" " src="~/Content/Images/@item.Image1"></a>
+                                    <p style="height: 55px;">@item.Name</p>
+
+                                    <h4 style="font-family:Arial">@item.Price đ</h4>
+                                    <h4 style="color: orangered; font-weight: lighter; margin-top: 15px; font-family:Arial">Số lượng: @item.Amount</h4>
+                                </div>
+
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Sản phẩm-->
+
+        i++;
+    }
+}

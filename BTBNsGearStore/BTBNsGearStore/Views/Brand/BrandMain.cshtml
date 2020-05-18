@@ -1,0 +1,17 @@
+﻿@model IEnumerable<BTBNsGearStore.Models.Brand>
+
+@{
+    Layout = null;
+}
+<!--
+<select style="border: 2px;width: 100px;height: 40px;border-radius: 7px;background: linear-gradient(to top, #f75b00, #ffb327); ">
+    @foreach (var item in Model)
+    {
+        <option>
+            @item.Name
+        </option>
+    }
+</select>
+
+-->
+        @Html.DropDownList("brand", (SelectList)ViewBag.Brand, "Thương hiệu", new { @class = "form-control",@style="border: 2px;width: 128px;height: 40px;border-radius: 7px;background: linear-gradient(to top, #f75b00, #ffb327); float: left; margin-right:10px; margin-left:500px;" })

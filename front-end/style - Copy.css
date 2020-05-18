@@ -1,0 +1,89 @@
+@charset 'utf-8';
+body
+{
+    background-image: url("./images/keyboardwallpaper.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0px;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+#khung
+{
+    margin: auto;
+    width: 1200px;
+}
+
+#header
+{
+    background-color: #192b6b;
+    width: 100%;
+    height: 180px;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+
+#header a
+{
+    text-decoration: none;
+    color:white;
+}
+
+#line1
+{
+    text-align: center;
+    padding: 10px;
+    left: 150px;
+    right: 150px;
+    height: 20px;
+    
+}
+
+#line1 a
+{
+    padding: 10px;
+}
+
+#line2
+{
+    text-align: center;
+    color:white;
+    height: 80px;
+    width: 100%;
+}
+
+#line2 td
+{
+    padding-bottom : 20px;
+}
+
+#line3
+{
+    right: 150px;
+    height: 60px;
+    width: 100%;
+    top: 120px;
+    text-align: center;
+}
+
+#line3 option
+{
+    color: #242424;
+}
+
+#content
+{
+}
+
+#footer
+{
+    bottom: 0px;
+    background-color:#d1d1d1;
+    color:#000a2e;
+    position: relative;
+    width: 100%;
+    text-align: left;
+}

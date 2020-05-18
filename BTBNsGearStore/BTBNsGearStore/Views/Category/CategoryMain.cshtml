@@ -1,0 +1,15 @@
+﻿@model IEnumerable<BTBNsGearStore.Models.Category>
+
+@{
+    Layout = null;
+}
+<!--
+ <select style="border: 2px;width: 150px;height: 40px;border-radius: 7px;background: linear-gradient(to top, #f75b00, #ffb327); ">
+        @foreach (var item in Model)
+        {
+            <option>@item.Name</option>
+        }
+    </select>
+
+-->
+        @Html.DropDownList("category", (SelectList)ViewBag.Category, "Danh mục sản phẩm", new { @class = "form-control", @style = "border: 2px;width: 185px;height: 40px;border-radius: 7px;background: linear-gradient(to top, #f75b00, #ffb327); float: left; margin-right:10px; " })

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BTBNsGearStore.Models.Category>
+
+@{
+    ViewBag.Title = "Danh Sách Danh Mục";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Danh Sách Danh Mục</h2>
+
+<p class="btn btn-default" style="margin-bottom:15px">
+    @Html.ActionLink("Thêm mới", "ThemMoi")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Tên
+        </th>
+        <th>
+            Logo
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        <img src="~/Content/Images/@item.Image" width="80" height="90" style="border-radius:7px" />
+    </td>
+    <td class="btn btn-default">
+        @Html.ActionLink("Xóa", "Xoa", new { id = item.Id }, new { onclick = "return confirm('Bạn có chắc muốn xóa không?');" })
+    </td>
+</tr>
+}
+
+</table>

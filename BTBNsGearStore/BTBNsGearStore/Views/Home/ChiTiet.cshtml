@@ -1,0 +1,87 @@
+﻿@model BTBNsGearStore.Models.Product
+
+@{
+    ViewBag.Title = "ChiTiet";
+    Layout = "~/Views/BTBNsGear/BTBNsGearStore.cshtml";
+}
+
+<!--Thông tin sản phẩm-->
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><a href="TrangChu"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+            <li class="active">Chi tiết sản phẩm</li>
+        </ol>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<div class="products">
+    <div class="container">
+        <div class="agileinfo_single">
+            <div class="col-md-4 agileinfo_single_left">
+                <img id="example" src="~/Content/Images//@Model.Image2" alt=" " class="img-responsive">
+            </div>
+            <div class="col-md-8 agileinfo_single_right">
+                <h2 style="font-family:Calibri;">@Model.Name</h2>
+
+                <div class="w3agile_description">
+                    <h4>Mô tả sản phẩm</h4>
+                    <p>
+                        @Model.Detail
+                    </p>
+                </div>
+                <div class="snipcart-item block">
+                    <div class="snipcart-thumb agileinfo_single_right_snipcart">
+                        Giá bán:
+                        <span style=" font-weight: bold; font-size: 25px; color: red;">@Model.Price đ</span>
+                        <br /><br />
+                        Bảo hành: <span style="color: red; font-weight: bold;">@Model.Guarantee tháng</span><br /><br />
+                        <span style="font-weight: bold; color: #000000;">Thông tin kho hàng:</span>
+                        <br />
+                        Có sẵn: <span style=" font-weight: bold; color: rgb(255, 115, 0);">@Model.Amount</span><br /><br />
+                        <span style="font-weight: bold; color: #000000;">Chính sách bán hàng:</span>
+                        <ul>
+                            <li>Sản phẩm chính hãng 100%</li>
+                            <li>Bán hàng online toàn quốc</li>
+                            <li>Trả bảo hành tận nơi sử dụng</li>
+                            <li>Bảo hành tận nơi cho doanh nghiệp</li>
+                            <li>Giá cạnh tranh nhất thị trường</li>
+                            <li>Giảm giá 2% khi mua kèm PC</li>
+                            <li>Chính sách bảo hành vàng cho doanh nghiệp</li>
+                        </ul>
+                        <br />
+
+                        
+                                <a href="/Customer/Order?Id=@Model.Id">
+                                    <div style="width: 190px; border-radius:4px; height: 35px; background-color: #ff3305; text-align: center; color: rgb(255, 254, 254); font-size: 25px; font-weight: lighter;">
+                                        Đặt Hàng Ngay
+                                    </div>
+                                </a>
+                                <a href="https://www.messenger.com/t/BTBNsGear">
+                                    <div style="width: 190px; border-radius:4px; height: 70px; background-color: #0064c2; text-align: center; color: rgb(255, 254, 254); font-size: 25px; font-weight: lighter; margin-top: 20px;">
+                                        <span style="float:left;">Đặt hàng qua Facebook</span>
+                                    </div>
+                                </a>
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div style="text-align: center; color: #ff7220;">
+            <H2 style="margin-bottom:30px; margin-top:30px;">THÔNG SỐ KĨ THUẬT VÀ ĐÁNH GIÁ</H2>
+        </div>
+        @Html.Raw(Model.NoiDung)
+    </div>
+    <div style="text-align: center; color: #ff7220;">
+        <H2 style="margin-bottom:30px; margin-top:30px;">HÌNH ẢNH SẢN PHẨM</H2>
+        <img src="~/Content/Images//@Model.Image3" style="width: 780px;" />
+        <br/><br/>
+        <img src="~/Content/Images//@Model.Image4" style="width: 780px;" />
+    </div>
+</div>
+	
+
+
+<!--End Thông tin sản phẩm-->

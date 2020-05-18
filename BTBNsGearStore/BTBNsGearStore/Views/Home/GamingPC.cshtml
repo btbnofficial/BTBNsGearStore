@@ -1,0 +1,42 @@
+﻿@model IEnumerable<BTBNsGearStore.Models.Product>
+
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/BTBNsGear/Products.cshtml";
+}
+
+@{
+    int i = 0;//Khai báo biến
+}
+@foreach (var item in Model)
+{
+    <!--Ảnh nhỏ sản phẩm-->
+    <div class="col-md-4 top_brand_left" style="margin-bottom:20px;">
+        <div class="hover14 column">
+            <div class="agile_top_brand_left_grid">
+
+                <div class="agile_top_brand_left_grid1">
+                    <figure>
+                        <div class="snipcart-item block">
+                            <div class="snipcart-thumb">
+                                <a href="/Home/ChiTiet?Id=@item.Id"><img title=" " alt=" " src="~/Content/Images/@item.Image1"></a>
+                                <p style="height: 55px;">@item.Name</p>
+                                <h4 style="font-family:Calibri;">@item.Price đ</h4>
+                                <h4 style="color: orangered; font-weight: lighter; margin-top: 15px; font-family:Calibri;">Số lượng: @item.Amount</h4>
+
+                            </div>
+
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Ảnh nhỏ sản phẩm-->
+    if (i % 3 == 2)
+    {
+        <div class="clearfix"> </div>
+    }
+
+    i++;
+}

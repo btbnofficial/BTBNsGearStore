@@ -1,0 +1,89 @@
+﻿@model BTBNsGearStore.Models.Product
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Đặt mua sản phẩm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Product Order Form Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- fonts  -->
+    <link href="//fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
+    <!-- /fonts -->
+    <!-- css -->
+    <link href="~/Content/css/style_order.css" rel='stylesheet' type='text/css' media="all" />
+    <link rel="shortcut icon" type="image/png" href="~/Content/Images/favicon.png" />
+    <!-- /css -->
+</head>
+<body>
+    <h1 class="header-agileits w3layouts w3 w3l w3ls" style="font-family: Calibri;">Đặt Mua Sản Phẩm</h1>
+    <div class="content-w3ls agileits agileinfo wthree">
+        <form action="#" method="post">
+            <div class="form-wthree1 agileits agileinfo wthree">
+                <div style="color:white; font-weight:lighter;font-size:25px;">
+                    <div class="col-md-4 agileinfo_single_left">
+                        <img id="example" src="~/Content/Images//@Model.Image2" alt=" " style="height:200px;" class="img-responsive">
+                    </div>
+                    <div class="col-md-8 agileinfo_single_right">
+                        <h2 style="font-family:Calibri;">@Model.Name</h2>
+                        <br/>
+                        <div class="w3agile_description">
+                            <h4>Mô tả sản phẩm:</h4>
+                            <p style="font-size:20px;">
+                                @Model.Detail
+                            </p><br />
+                        </div>
+                        <div class="snipcart-item block">
+                            <div class="snipcart-thumb agileinfo_single_right_snipcart">
+                                Giá bán:
+                                <span style=" font-weight: bold; font-size: 25px; color: red;">@Model.Price đ</span>
+                                <br /><br />
+                                Bảo hành: <span style="color: red; font-weight: bold;">@Model.Guarantee tháng</span><br /><br />
+                                <span style="font-weight: bold; color: white;">Thông tin kho hàng:</span>
+                                
+                                Có sẵn: <span style=" font-weight: bold; color: rgb(255, 115, 0);">@Model.Amount</span><br /><br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label class="header">Số Lượng <span>:</span></label>
+                    <input type="text" id="firstname" name="firstname" placeholder="Số lượng" title="Bạn phải nhập SL" required="">
+
+                </div>
+                <div class="form-control">
+                    <label class="header">Tên Khách Hàng <span>:</span></label>
+                    <input type="text" id="firstname" name="firstname" placeholder="Tên của bạn" title="Bạn phải nhập tên" required="">
+                </div>
+                <div class="form-control">
+                    <label class="header">Địa Chỉ Email<span>:</span></label>
+                    <input type="email" id="email" name="email" placeholder="Mail@example.com" title="Bạn phải nhập đúng địa chỉ Email " required="">
+                </div>
+                <div class="form-control">
+                    <label class="header">Điện Thoại<span>:</span></label>
+                    <input style="font-family: Calibri;" type="tel" id="usrtel2" name="usrtel2" placeholder="????????" title="Bạn phải nhập số điện thoại" required="">
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="form-control2">
+                <label class="header" style="font-family: Calibri;">Địa Chỉ <span>:</span></label>
+                <input style="font-family: Calibri;" type="text" id="address2" name="address2" placeholder="Địa chỉ của bạn" title="Bạn phải nhập địa chỉ" required="">
+            </div>
+            <div class="clear"></div>
+            <div class="form-control last">
+                <input style="font-family: Calibri;" type="submit" class="register" value="ĐẶT HÀNG">
+                <input style="font-family: Calibri;" type="reset" class="reset" value="LÀM MỚI">
+                <div class="clear"></div>
+            </div>
+        </form>
+    </div>
+    <p class="copyright w3layouts w3 w3l w3ls"><a href="/Home/TrangChu">© BTBN's Gear Store</a></p>
+</body>
+</html>

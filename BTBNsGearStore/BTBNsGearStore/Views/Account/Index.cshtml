@@ -1,0 +1,76 @@
+﻿@model IEnumerable<BTBNsGearStore.Models.Account>
+
+@{
+    ViewBag.Title = "Danh Sách Account";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Danh Sách Account</h2>
+
+<p class="btn btn-default" style="margin-bottom:15px;">
+    @Html.ActionLink("Thêm Mới", "ThemMoi")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            Tài khoản
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            Họ tên
+        </th>
+        <th>
+            Điện thoại
+        </th>
+        <th>
+            Quản Lý/ Nhân viên
+        </th>
+        <th>
+            Lương
+        </th>
+        <th>
+            Ngày tham gia
+        </th>
+        <th>
+            Phòng ban
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Password)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Phone)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Type)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Salary)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateJoined)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Department)
+    </td>
+    <td>
+        @Html.ActionLink("Sửa", "Sua", new { id = item.Id }) |
+        @Html.ActionLink("Chi tiết", "ChiTiet", new { id = item.Id }) |
+        @Html.ActionLink("Xóa", "Xoa", new { id = item.Id }, new { onclick = "return confirm('Bạn có chắc muốn xóa không??');" })
+    </td>
+</tr>
+}
+
+</table>

@@ -1,0 +1,305 @@
+@charset 'utf-8';
+body
+{
+    background-color: #e4e4e4;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    margin: 0px;
+    font-family: Helvetica;
+    font-size: 15px; 
+    line-height: 1.7;
+}
+
+#khung
+{
+    margin: auto;
+    width: 1200px;
+}
+
+#header
+{
+    margin: auto;
+    width: 100%;
+    background-color: #323741;
+}
+
+#header_1200
+{
+    background-color: #323741;
+    width: 1200px;
+    height: 180px;
+    margin: auto;
+    padding: 0px;
+    display: block;
+}
+
+
+#header a
+{
+    text-decoration: none;
+    color:white;
+}
+
+#header a:hover
+{
+    color:  #ff7220;
+}
+
+#line1
+{
+    text-align: center;
+    padding: 10px;
+    left: 150px;
+    right: 150px;
+    height: 20px;
+}
+
+#line1 a
+{
+    padding: 14px;
+}
+
+#line2
+{
+    text-align: center;
+    color:white;
+    height: 80px;
+    width: 100%;
+}
+
+#line2 td
+{
+    padding-bottom : 20px;
+}
+
+#line3
+{
+    right: 150px;
+    height: 60px;
+    width: 100%;
+    top: 120px;
+    text-align: center;
+}
+
+#line3 option
+{
+    color: #0d6b26;
+}
+
+#line3 select:hover
+{
+    color: rgb(255, 255, 255);
+}
+
+#content
+{
+    margin: 0px;
+}
+
+#menu
+{
+    background-color: rgb(240, 240, 240);
+    margin: auto;
+    text-align: center;
+}
+
+#menu ul
+{
+    list-style-type: none;
+    text-align: center;
+    padding: 0px;
+}
+
+#menu ul li
+{
+    display: inline-table;
+    width: 160px;
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+    line-height: 20px;
+    font-weight: normal;
+    font-size: 12px;
+    margin-top: 10px;
+}
+#menu ul li a img{
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+}
+
+#menu ul li a:hover
+{
+    color: #ff7220;
+}
+
+#menu ul li > .sub-menu
+{
+    display: none;
+    position: absolute;
+    background-color:rgb(240, 240, 240);
+}
+
+#menu ul li:hover .sub-menu
+{
+    display: block;
+}
+
+.CategoryBar
+{
+    text-align: left;
+    background-color: #d4d3d3;
+    font-size: 20px;
+    font-weight: 100; 
+    color: #000000; 
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    clear: both;
+}
+
+.sanPham
+{
+    background-color: #fafafa;
+    width: 216px;
+    height: 325px;
+    padding-right: 11px;
+    padding-left: 9px;
+    padding-top: 10px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.sanPham a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.tenSanPham
+{
+    text-decoration: none;
+    width: 219px;
+    height: 50px;
+}
+.gia
+{
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.soLuong
+{
+    color: #ff7220;
+}
+
+.thumnail img
+{
+    margin: auto;
+    width: 219px;
+    height: 200px;
+}
+
+.cleaner {
+	clear: both;
+	width: 100%;
+	height: 1px;
+    font-size: 1px;	
+    background-color: #ff7220;
+}
+
+.cleaner_with_height {
+	clear: both;
+	width: 100%;
+	height: 1px;
+    font-size: 1px;	
+}
+
+.cleaner_with_width {
+	float: left;
+	width: 5px;
+	height: 30px;
+    font-size: 1px;	
+}
+
+#contact
+{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+#contact img
+{
+    border-radius: 30%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#tableCuoi
+{
+    color:white;
+}
+
+#tableCuoi table
+{
+    border-spacing: 50px;
+}
+
+
+
+#footer
+{
+    margin: auto;
+    width: 100%;
+    background-image: url("./Images/587593.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: local;
+
+}
+
+#footer_1200
+{
+    color:white;
+    width: 1200px;
+    text-align: left; 
+    margin: auto;
+    padding-left: 0px;
+}
+
+
+#detail_1200
+{
+    color:rgb(0, 0, 0);
+    width: 1200px;
+    text-align: left; 
+    margin: auto;
+    padding-left: 0px;
+}
+
+#tableCuoi a:hover
+{
+    color: #ff7220;
+}
+
+#tableCuoi a
+{
+    color: rgb(228, 228, 228);
+    text-decoration: none;
+}
+
+.TieuDeTrangPhu
+{
+    color: rgb(12, 60, 150);
+}

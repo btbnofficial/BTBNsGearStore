@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/BTBNsGear/BTBNsGearStore.cshtml";
+}
+
+
+<!--Products-->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><a href="TrangChu"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+            <li class="active">Sản phẩm</li>
+        </ol>
+    </div>
+</div>
+@using (Html.BeginForm("TimKiem", "Home", FormMethod.Post))
+{
+    <div id="line3">
+        <table style="margin-top:20px;">
+            <tr>
+                <td align="center">
+                    @Html.Partial("_SelectBrand")
+                    @Html.Partial("_SelectCategory")
+                    @Html.TextBox("TuKhoa", "", new { @class = "form-control", @style = "border: 2px;width: 361px;height: 40px;border-radius: 7px;font-size: 14px; padding: 0px; margin-top: 0px; background-color:#e6fffb; float: left; margin-right:10px;" })
+                    <!--
+        <input type="text" style="border: 2px;width: 861px;height: 40px;border-radius: 7px;font-size: 14px; padding: 0px; margin-top: 5px;" />
+        <input type="button" value="Tìm" style="border: 2px;width: 70px;height: 40px;border-radius: 7px;background: linear-gradient(to top, #f75b00, #ffb327); " />
+        -->
+                    <input type="submit" value="Tìm" class="btn btn-primary" style="border: 2px;width: 70px;height: 40px;border-radius: 7px;background: linear-gradient(to top, #f75b00, #ffb327); " />
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+}
+<div class="products">
+    <div class="container">
+        <div class="col-md-4 products-left">
+            <div class="categories">
+                <h2>DANH MỤC SẢN PHẨM</h2>
+                <ul class="cate">
+                    <li><a href="/Home/LayDanhSachProductTheoCategory?Id=5"><i class="fa fa-arrow-right" aria-hidden="true"></i>PC</a></li>
+                    <ul>
+                        <li><a href="/Home/GamingPC?giaMin=0&giaMax=8000000">Gaming PC dưới 8 triệu</a></li>
+                        <li><a href="/Home/GamingPC?giaMin=8000000&giaMax=10000000">Gaming PC 8-10 triệu</a></li>
+                        <li><a href="/Home/GamingPC?giaMin=10000000&giaMax=15000000">Gaming PC 10-15 triệu</a></li>
+                        <li><a href="/Home/GamingPC?giaMin=15000000&giaMax=20000000">Gaming PC 15-20 triệu</a></li>
+                        <li><a href="/Home/GamingPC?giaMin=20000000&giaMax=25000000">Gaming PC 20-25 triệu</a></li>
+                        <li><a href="/Home/GamingPC?giaMin=25000000&giaMax=30000000">Gaming PC 25-30 triệu</a></li>
+                        <li><a href="/Home/GamingPC?giaMin=30000000&giaMax=100000000">Gaming PC trên 30 triệu</a></li>
+                    </ul>
+                    <li><a href="/Home/LayDanhSachProductTheoCategory?Id=5"><i class="fa fa-arrow-right" aria-hidden="true"></i>Linh kiện máy tính</a></li>
+                    <ul>
+                        <li><a href="/Home/TimKiem?tuKhoa=CPU&category=6">Cpu - Bộ vi xử lý</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=vga&category=6">VGA - Card màn hình</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=main&category=6">Mainboard - Bo mạch chủ</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=ram&category=6">Ram - bộ nhớ trong</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=ssd&category=6">Ổ cứng Ssd - Hdd</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=case&category=6">Case - vỏ máy tính</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=nguồn&category=6">PSU - nguồn máy tính</a></li>
+                    </ul>
+                    <li><a href="/Home/LayDanhSachProductTheoCategory?Id=12"><i class="fa fa-arrow-right" aria-hidden="true"></i>Gaming Gear</a></li>
+                    <ul>
+                        <li><a href="/Home/TimKiem?tuKhoa=Bàn+phím&category=12">Keyboard - bàn phím</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=chuột&category=12">Mouse - chuột chơi game</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=tai+nghe&category=12">Tai nghe</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=ghế&category=12">Bàn ghế chơi game</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=phụ+kiện+chơi+game&category=12">Phụ kiện chơi game</a></li>
+                    </ul>
+                    <li><a href="/Home/LayDanhSachProductTheoCategory?Id=3"><i class="fa fa-arrow-right" aria-hidden="true"></i>Màn hình</a></li>
+                    <ul>
+                        <li><a href="/Home/TimKiem?tuKhoa=màn+hình+phổ+thông&category=3">Màn hình phổ thông</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=màn+hình+gaming&category=3">Màn hình gaming 144-240hz</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=màn+hình+đồ+họa&category=3">Màn hình đồ họa</a></li>
+                    </ul>
+                    <li><a href="/Home/LayDanhSachProductTheoCategory?Id=9"><i class="fa fa-arrow-right" aria-hidden="true"></i>Thiết bị lưu trữ, nghe nhìn</a></li>
+                    <ul>
+                        <li><a href="/Home/TimKiem?tuKhoa=loa&category=9">Loa máy tính</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=usb&category=9">USB</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=di+động&category=9">Ổ cứng di động</a></li>
+                    </ul>
+                    <li><a href="/Home/LayDanhSachProductTheoCategory?Id=10"><i class="fa fa-arrow-right" aria-hidden="true"></i>Camera</a></li>
+                    <ul>
+                        <li><a href="/Home/TimKiem?tuKhoa=camera&category=10">Camera</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=webcam&category=10">Webcam</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=gói+lắp+đặt&category=10">Gói lắp đặt camera quan sát</a></li>
+                    </ul>
+                    <li><a href="/Home/LayDanhSachProductTheoCategory?Id=11"><i class="fa fa-arrow-right" aria-hidden="true"></i>Cooling - Tản nhiệt</a></li>
+                    <ul>
+                        <li><a href="/Home/TimKiem?tuKhoa=tản+nhiệt+khí&category=11">Tản nhiệt khí</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=nước&category=11">Tản nhiệt nước All in one</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=fan+case&category=11">Fan case</a></li>
+                        <li><a href="/Home/TimKiem?tuKhoa=mod+case&category=11">Linh kiện độ mod case</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-8 products-right">
+            <div class="products-right-grid">
+                <div class="products-right-grids">
+                    <div class="sorting">
+                        <select id="country" onchange="change_country(this.value)" class="frm-field required sect">
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Sắp xếp theo thời gian cập nhật</option>
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Sắp xếp theo giá tăng dần</option>
+                        </select>
+                    </div>
+                    <div class="sorting-left">
+                        <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>9 sản phẩm trên trang</option>
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>18 sản phẩm trên trang</option>
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>32 sản phẩm trên trang</option>
+                            <option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>tất cả sản phẩm trên trang</option>
+                        </select>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            @RenderBody()
+            <div class="clearfix"> </div>
+            <nav class="numbering">
+                <ul class="pagination paging">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!--- products --->

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/css/style.css" type="text/css" />
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <style>
+        span
+        {
+            padding-left:5px;
+        }
+       
+    </style>
+</head>
+<body style="padding:0px;">
+
+
+    <div style="background-color:#323741; margin:0px;">
+        <h1 style="text-align:left; color:white; margin:0px; padding:20px; padding-left:220px;">
+            <a href="/Home/TrangChu" style="margin-right:100px;">
+                <img src="~/Content/Images/logo123.png" width="260" height="65" />
+            </a>
+
+            Quản Trị BTBN's Gear Store
+        </h1>
+    </div>
+
+    <!--sidebar start-->
+    <aside style="float:left; width:200px; margin-left:5px;">
+        <div id="sidebar" class="nav-collapse">
+            <!-- sidebar menu start-->
+            <div class="leftside-navigation" >
+                <ul class="sidebar-menu" id="nav-accordion" style="margin-top:5px;  border-radius:3px;">
+                    <li>
+                        <a class="active" href="~/Account/Index">
+                            <div style=" background-color:#323741; margin-bottom:4px; color:white; padding-top:15px; padding-bottom:15px; border-radius:3px;">
+                                <span style="font-size:18px; font-weight:lighter;">Account Management</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="active" href="~/Brand/Index">
+                            <div style="  background-color:#323741; margin-bottom:4px; color:white; padding-top:15px; padding-bottom:15px; border-radius:3px;">
+                                <span style="font-size:18px; font-weight:lighter;">Brand Management</span>
+                            </div>
+
+                        </a>
+                    </li>
+
+                    <li>
+
+                        <a class="active" href="~/Category/Index">
+                            <div style=" background-color:#323741; margin-bottom:4px; color:white; padding-top:15px; padding-bottom:15px; border-radius:3px;">
+                                <span style="font-size:18px; font-weight:lighter;">Category Management</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="active" href="~/Post/Index">
+                            <div style=" background-color:#323741; margin-bottom:4px; color:white; padding-top:15px; padding-bottom:15px; border-radius:3px;">
+                                <span style="font-size:18px; font-weight:lighter;">Post Management</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="active" href="~/Product/Index">
+                            <div style="  background-color:#323741; margin-bottom:4px; color:white;padding-top:15px; padding-bottom:15px; border-radius:3px;">
+                                <span style="font-size:18px; font-weight:lighter;">Product Management</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="active" href="~/Customer/Index">
+                            <div style="background-color:#323741; margin-bottom:4px; color:white; padding-top:15px; padding-bottom:15px; border-radius:3px;">
+                                <span style="font-size:18px; font-weight:lighter;">Customer Management</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="active" href="~/Bill/Index">
+                            <div style="background-color:#323741; margin-bottom:4px; color:white; padding-top:15px; padding-bottom:15px; border-radius:3px;">
+                                <span style="font-size:18px; font-weight:lighter;">Bill Management</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+
+    <div class="container body-content" style="margin:auto;">
+        @RenderBody()
+        <hr />
+        <footer>
+        </footer>
+    </div>
+</body>
+</html>

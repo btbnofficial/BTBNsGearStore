@@ -1,0 +1,33 @@
+﻿@model BTBNsGearStore.Models.Post
+
+@{
+    ViewBag.Title = "BaiViet";
+    Layout = "~/Views/BTBNsGear/BTBNsGearStore.cshtml";
+}
+
+<h2>@Model.Title</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.NoiDung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatePosted) : @Html.DisplayFor(model => model.DatePosted)
+        </dt>
+
+        <dd>
+            
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Trở lại trang chủ", "TrangChu", new { @class = "btn btn-default"})
+</p>

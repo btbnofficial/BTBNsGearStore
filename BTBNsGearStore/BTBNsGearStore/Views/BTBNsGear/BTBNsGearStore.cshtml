@@ -1,0 +1,353 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BTBN's Gear Store</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Super Market Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- font-awesome icons -->
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!-- js -->
+    <script src="~/Content/js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <!-- start-smoth-scrolling -->
+    <link rel="shortcut icon" type="image/png" href="~/Content/Images/favicon.png" />
+    <script type="text/javascript" src="~/Content/js/move-top.js"></script>
+    <script type="text/javascript" src="~/Content/js/easing.js"></script>
+    <script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+    </script>
+    <!-- start-smoth-scrolling -->
+</head>
+
+<body>
+    @using (Html.BeginForm("TimKiem", "Home", FormMethod.Post))
+    {
+        <!-- header -->
+        <div class="agileits_header">
+            <div class="container">
+                <div class="w3l_offers">
+                    <p></p>
+                </div>
+                <div class="agile-login">
+                    <ul>
+                        <li><a href="/Business/Login">Đăng nhập</a></li>
+                        <li><a href="contact.html">Trợ giúp</a></li>
+                    </ul>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+
+        <div class="logo_products">
+            <div class="container">
+                <div class="w3ls_logo_products_left1">
+                    <ul class="phone_email">
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>Đặt hàng onile hoặc liên hệ : (+84) 981134542</li>
+
+                    </ul>
+                </div>
+                <div class="w3ls_logo_products_left">
+                    <h1><a href="/Home/TrangChu">BTBN's Gear Store</a></h1>
+                </div>
+                <div class="w3l_search">
+                    <form action="#" method="post">
+                        @Html.TextBox("TuKhoa", "", new { @class = "form-control", @style = "border: 2px;width: 230px;height: 35px;border-radius: 7px;font-size: 14px; padding: 0px; margin-top: 5px; float:left; background-color:#e6fffb;" })
+                        <button type="submit" class="btn btn-default search" aria-label="Left Align">
+                            <i class="fa fa-search" aria-hidden="true"> </i>
+                        </button>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- //header -->
+        <!-- navigation -->
+        <div class="navigation-agileits">
+            <div class="container">
+                <nav class="navbar navbar-default" style="font-size: 10px;">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header nav_2">
+                        <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="TrangChu" class="act" style="font-size: 13px;">Trang chủ</a></li>
+                            <!-- Mega Menu -->
+                            <li class="dropdown">
+                                <a href="/Home/LayDanhSachProductTheoCategory?Id=5" class="dropdown-toggle" data-toggle="dropdown">PC<b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="row">
+                                        <div class="multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <a href="/Home/LayDanhSachProductTheoCategory?Id=5"><h6>Tất cả PC</h6></a>
+                                                <li><a href="/Home/GamingPC?giaMin=0&giaMax=8000000">Gaming PC dưới 8 triệu</a></li>
+                                                <li><a href="/Home/GamingPC?giaMin=8000000&giaMax=10000000">Gaming PC 8-10 triệu</a></li>
+                                                <li><a href="/Home/GamingPC?giaMin=10000000&giaMax=15000000">Gaming PC 10-15 triệu</a></li>
+                                                <li><a href="/Home/GamingPC?giaMin=15000000&giaMax=20000000">Gaming PC 15-20 triệu</a></li>
+                                                <li><a href="/Home/GamingPC?giaMin=20000000&giaMax=25000000">Gaming PC 20-25 triệu</a></li>
+                                                <li><a href="/Home/GamingPC?giaMin=25000000&giaMax=30000000">Gaming PC 25-30 triệu</a></li>
+                                                <li><a href="/Home/GamingPC?giaMin=30000000&giaMax=100000000">Gaming PC trên 30 triệu</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/Home/LayDanhSachProductTheoCategory?Id=6" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 13px;">Linh kiện máy tính<b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="row">
+                                        <div class="multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <a href="/Home/LayDanhSachProductTheoCategory?Id=6"><h6>Tất cả linh kiện máy tính</h6></a>
+                                                <li><a href="/Home/TimKiem?tuKhoa=CPU&category=6">Cpu - Bộ vi xử lý</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=vga&category=6">VGA - Card màn hình</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=main&category=6">Mainboard - Bo mạch chủ</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=ram&category=6">Ram - bộ nhớ trong</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=ssd&category=6">Ổ cứng Ssd - Hdd</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=case&category=6">Case - vỏ máy tính</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=nguồn&category=6">PSU - nguồn máy tính</a></li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/Home/LayDanhSachProductTheoCategory?Id=12" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 13px;">Gaming Gear<b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="row">
+                                        <div class="multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <a href="/Home/LayDanhSachProductTheoCategory?Id=12"><h6>Tất cả gaming gear</h6></a>
+                                                <li><a href="/Home/TimKiem?tuKhoa=Bàn+phím&category=12">Keyboard - bàn phím</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=chuột&category=12">Mouse - chuột chơi game</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=tai+nghe&category=12">Tai nghe</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=ghế&category=12">Bàn ghế chơi game</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=phụ+kiện+chơi+game&category=12">Phụ kiện chơi game</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/Home/LayDanhSachProductTheoCategory?Id=3" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 13px;">Màn hình<b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="row">
+                                        <div class="multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <a href="/Home/LayDanhSachProductTheoCategory?Id=3"><h6>Tất cả màn hình</h6></a>
+                                                <li><a href="/Home/TimKiem?tuKhoa=màn+hình+phổ+thông&category=3">Màn hình phổ thông</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=màn+hình+gaming&category=3">Màn hình gaming 144-240hz</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=màn+hình+đồ+họa&category=3">Màn hình đồ họa</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/Home/LayDanhSachProductTheoCategory?Id=9" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 13px;">Thiết bị lưu trữ, nghe nhìn<b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="row">
+                                        <div class="multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <a href="/Home/LayDanhSachProductTheoCategory?Id=9"><h6>Tất cả thiết bị lưu trĩ, nghe nhìn</h6></a>
+                                                <li><a href="/Home/TimKiem?tuKhoa=loa&category=9">Loa máy tính</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=usb&category=9">USB</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=di+động&category=9">Ổ cứng di động</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/Home/LayDanhSachProductTheoCategory?Id=10" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 13px;">Camera<b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="row">
+                                        <div class="multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <a href="/Home/LayDanhSachProductTheoCategory?Id=10"><h6>Tất cả camera</h6></a>
+                                                <li><a href="/Home/TimKiem?tuKhoa=camera&category=10">Camera</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=webcam&category=10">Webcam</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=gói+lắp+đặt&category=10">Gói lắp đặt camera quan sát</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/Home/LayDanhSachProductTheoCategory?Id=11" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 13px;">Cooling - Tản nhiệt<b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="row">
+                                        <div class="multi-gd-img">
+                                            <ul class="multi-column-dropdown">
+                                                <a href="/Home/LayDanhSachProductTheoCategory?Id=11"><h6>Tất cả</h6></a>
+                                                <li><a href="/Home/TimKiem?tuKhoa=tản+nhiệt+khí&category=11">Tản nhiệt khí</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=nước&category=11">Tản nhiệt nước All in one</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=fan+case&category=11">Fan case</a></li>
+                                                <li><a href="/Home/TimKiem?tuKhoa=mod+case&category=11">Linh kiện độ mod case</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- //navigation -->
+        @RenderBody()
+        <!-- //footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="w3_footer_grids">
+                    <div class="col-md-3 w3_footer_grid">
+                        <h3>Contact</h3>
+
+                        <ul class="address">
+                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Km 10 Trần Phú - Hà Đông <span>Hà Nội.</span></li>
+                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">btbnofficial@gmail.com</a></li>
+                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+(84)981134542</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 w3_footer_grid">
+                        <h3>Information</h3>
+                        <ul class="info">
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="about.html">About Us</a></li>
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="contact.html">Contact Us</a></li>
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="short-codes.html">Short Codes</a></li>
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="faq.html">FAQ's</a></li>
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Special Products</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 w3_footer_grid">
+                        <h3>Category</h3>
+                        <ul class="info">
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/Home/LayDanhSachProductTheoCategory?Id=5">PC</a></li>
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/Home/LayDanhSachProductTheoCategory?Id=5">Linh kiện máy tính</a></li>
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/Home/LayDanhSachProductTheoCategory?Id=12">Gaming Gear</a></li>
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/Home/LayDanhSachProductTheoCategory?Id=3">Màn hình</a></li>
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/Home/LayDanhSachProductTheoCategory?Id=9">Thiết bị lưu trữ, nghe nhìn</a></li>
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/Home/LayDanhSachProductTheoCategory?Id=10">Camera</a></li>
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/Home/LayDanhSachProductTheoCategory?Id=11">Cooling - tản nhiệt</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 w3_footer_grid">
+                        <h3>Profile</h3>
+                        <ul class="info">
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Store</a></li>
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="checkout.html">My Cart</a></li>
+                            <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/Business/Login">Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+
+            <div class="footer-copy">
+
+                <div class="container">
+                    <p>© 2020 BTBN's Gear Store</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-botm">
+            <div class="container">
+                <div >
+                    
+                            <a href="https://www.facebook.com/BTBNsGear"><img src="~/Content/Images/facebook-icon.png" width="30" height="30" style="border-radius:11px; margin-right:10px; float:left;" /></a>
+                            <a href="https://www.instagram.com/btbncsgo/"><img src="~/Content/Images/49803d8eb5ea235a5860ac942caece70_download-png-download-eps-instagram-logo-clipart-png_1024-1024-900x900.png" width="30" height="30" style="border-radius:11px; margin-right:10px; float:left;" /></a>
+                            <a href="https://www.youtube.com/channel/UCUv4nL31gGoSsBO2bZwaGWA"><img src="~/Content/Images/124015.png" width="30" height="30" style="border-radius:11px; margin-right:10px; float:left;" /></a>
+                            <a href="https://www.messenger.com/t/BTBNsGear"><img src="~/Content/Images/Apps-Facebook-Messenger-icon.png" width="30" height="30" style="border-radius:11px; margin-right:10px; float:left;" /></a>
+
+                   
+                </div>
+                <div class="payment-w3ls">
+
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- //footer -->
+        <!-- Bootstrap Core JavaScript -->
+        <script src="~/Content/js/bootstrap.min.js"></script>
+
+        <!-- top-header and slider -->
+        <!-- here stars scrolling icon -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                /*
+                    var defaults = {
+                    containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear'
+                    };
+                */
+
+                $().UItoTop({ easingType: 'easeOutQuart' });
+
+            });
+        </script>
+        <!-- //here ends scrolling icon -->
+        <script src="~/Content/js/minicart.min.js"></script>
+        <script>
+            // Mini Cart
+            paypal.minicart.render({
+                action: '#'
+            });
+
+            if (~window.location.search.indexOf('reset=true')) {
+                paypal.minicart.reset();
+            }
+        </script>
+        <!-- main slider-banner -->
+        <script src="~/Content/js/skdslider.min.js"></script>
+        <link href="~/Content/css/skdslider.css" rel="stylesheet">
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery('#demo1').skdslider({ 'delay': 5000, 'animationSpeed': 2000, 'showNextPrev': true, 'showPlayButton': true, 'autoSlide': true, 'animationType': 'fading' });
+
+                jQuery('#responsive').change(function () {
+                    $('#responsive_wrapper').width(jQuery(this).val());
+                });
+
+            });
+        </script>
+        <!-- //main slider-banner -->
+    }
+</body>
+</html>

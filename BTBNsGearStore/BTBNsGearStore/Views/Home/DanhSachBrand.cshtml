@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BTBNsGearStore.Models.Brand>
+
+@{
+    Layout = null;
+}
+
+@{
+    int i = 0;//Khai báo biến
+}
+
+<!--brands-->
+<div class="brands" style="background-color: gray;">
+    <div class="container">
+        <h3 style="color: rgb(255, 255, 255);">SẢN PHẨM THEO THƯƠNG HIỆU</h3>
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-2 w3layouts-brand" style="margin-top:20px;">
+                <div class="brands-w3l">
+                    <p> <a href="/Home/LayDanhSachProductTheoBrand?Id=@item.Id" style="font-size:12px;">
+    <img src="~/Content/Images/@item.Image" style="width:40px; height:40px;" />
+                        <br>
+    @item.Id
+</a>
+                       
+                    </p>
+                </div>
+            </div>
+            if (i % 6 == 5)
+            {
+                <div class="clearfix"></div>
+            }
+
+            i++;
+        }
+    </div>
+</div>
+<!--//brands-->

@@ -1,0 +1,68 @@
+﻿@model IEnumerable<BTBNsGearStore.Models.Post>
+
+@{
+    ViewBag.Title = "Danh sách bài viết";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách bài viết</h2>
+@using (Html.BeginForm("Index", "Post", FormMethod.Post))
+{
+    <fieldset>
+        <legend>
+            Nhập thông tin tìm kiếm:
+        </legend>
+        <table class="table table-striped">
+            <tr>
+                <td>Từ Khóa</td>
+                <td style="padding-left:30px; border-radius:7px">
+                    @Html.TextBox("tuKhoa", "", new { @class = "form-control" })
+                </td>
+                <td style="padding-left:30px">
+                    <input type="submit" name="btnTimKiem" value="Tìm kiếm" class="btn btn-primary" />
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <p class="btn btn-default" style="margin-bottom:20px;">
+        @Html.ActionLink("Thêm mới bài viết", "ThemMoi")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.DatePosted)
+            </th>
+            <td>
+            </td>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.DatePosted)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Sua", new { id = item.Id }) |
+            @Html.ActionLink("Chi Tiết", "ChiTiet", new { id = item.Id }) |
+            @Html.ActionLink("Xóa", "Xoa", new { id = item.Id })
+        </td>
+    </tr>
+        }
+
+    </table>
+}

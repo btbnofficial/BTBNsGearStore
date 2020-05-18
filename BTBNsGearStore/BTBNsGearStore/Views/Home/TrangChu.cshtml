@@ -1,0 +1,113 @@
+﻿@model IEnumerable<BTBNsGearStore.Models.Product>
+
+@{
+    ViewBag.Title = "BTBN's Gear - Trang Chủ";
+    Layout = "~/Views/BTBNsGear/BTBNsGearStore.cshtml";
+}
+<!-- main-slider -->
+<ul id="demo1">
+    <li>
+        <img src="~/Content/Images/HByihf.jpg" alt="" />
+        <!--Slider Description example-->
+        <div class="slide-desc">
+            <h3>Trải nghiệm gaming tuyệt vời</h3>
+        </div>
+    </li>
+    <li>
+        <img src="~/Content/Images/1111111111111112234234.jpg" alt="" />
+        <div class="slide-desc">
+            <h3>Nhiệt tình - Trách nhiệm</h3>
+        </div>
+    </li>
+
+    <li>
+        <img src="~/Content/Images/nuke.jpg" alt="" />
+        <div class="slide-desc">
+            <h3>Chất lượng đảm bảo</h3>
+        </div>
+    </li>
+</ul>
+<!-- //main-slider -->
+<!-- //top-header and slider -->
+<!-- new -->
+<div class="newproducts-w3agile">
+    <div class="container">
+        <h3>SẢN PHẨM KHUYẾN MÃI</h3>
+        @Html.Action("Line5Products", "Home")
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //new -->
+<!-- new -->
+<div class="newproducts-w3agile">
+    <div class="container">
+        <h3>SẢN PHẨM MỚI</h3>
+        @Html.Action("Line5Products", "Home")
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //new -->
+<!-- new -->
+<div class="newproducts-w3agile">
+    <div class="container">
+        <h3>GAMING PC</h3>
+        @Html.Action("Line5", "Home", new { categoryId = 5 })
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //new -->
+<!-- new -->
+<div class="newproducts-w3agile">
+    <div class="container">
+        <h3>GAMING GEAR</h3>
+        @Html.Action("Line5", "Home", new { categoryId = 12 })
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //new -->
+<!-- new -->
+<div class="newproducts-w3agile">
+    <div class="container">
+        <h3>LINH KIỆN MÁY TÍNH</h3>
+        @Html.Action("Line5", "Home", new { categoryId = 6 })
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //new -->
+<!-- new -->
+<div class="newproducts-w3agile">
+    <div class="container">
+        <h3>MÀN HÌNH</h3>
+        @Html.Action("Line5", "Home", new { categoryId = 3 })
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //new -->
+<!-- new -->
+<div class="newproducts-w3agile">
+    <div class="container">
+        <h3>THIẾT BỊ LƯU TRỮ, NGHE NHÌN</h3>
+        @Html.Action("Line5", "Home", new { categoryId = 9 })
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //new -->
+<!-- new -->
+<div class="newproducts-w3agile">
+    <div class="container">
+        <h3>CAMERA</h3>
+        @Html.Action("Line5", "Home", new { categoryId = 10 })
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //new -->
+<!-- new -->
+<div class="newproducts-w3agile">
+    <div class="container">
+        <h3>COOLING - TẢN NHIỆT</h3>
+        @Html.Action("Line5", "Home", new { categoryId = 11 })
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //new -->
+@Html.Action("DanhSachBrand", "Home")
